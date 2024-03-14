@@ -9,12 +9,14 @@ function App() {
   return (
     <>
       
-      <Header></Header>
-      <div className='md:flex'>
+    <div className='max-w-[1170px] mx-auto'>
+         <Header></Header>
+      <div className='md:flex mt-5'>
         <Blogs></Blogs>
         <Bookmarks></Bookmarks>
-    </div>
+      </div>
      
+     </div>
     </>
   )
 }
