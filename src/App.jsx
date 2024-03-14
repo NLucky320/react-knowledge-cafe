@@ -15,7 +15,7 @@ function App() {
   }
 
   const handleMarkAsRead = time => {
-  console.log('mark', time)
+  setReadingTime(readingTime+time)
 }
 
   return (
@@ -24,8 +24,10 @@ function App() {
     <div className='max-w-[1170px] mx-auto'>
          <Header></Header>
       <div className='md:flex mt-5'>
-        <Blogs handleAddToBookmark={handleAddToBookmark} handleMarkAsRead={handleMarkAsRead}></Blogs>
-        <Bookmarks bookmarks={bookmarks}></Bookmarks>
+          <Blogs
+            handleAddToBookmark={handleAddToBookmark}
+            handleMarkAsRead={handleMarkAsRead}></Blogs>
+        <Bookmarks bookmarks={bookmarks} readingTime={readingTime}></Bookmarks>
       </div>
      
      </div>
